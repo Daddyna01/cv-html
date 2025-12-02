@@ -32,7 +32,7 @@ body{
 /* COLONNA SINISTRA */
 .left-column{
     width: var(--left-width);
-    background: #f3f3f3;
+    background: #f8f4d6;
     padding: 24px;
     border-right: 1px solid #ddd;
 }
@@ -123,50 +123,59 @@ body{
 }
 
 /* STAMPA PDF */
+/* ======== OTTIMIZZAZIONE STAMPA DA MDN + ADATTATA AL TUO CV ======== */
 @media print {
 
-    body {
-      background: #fff !important;
-      padding: 0;
-      font-size: 10pt; /* font base uniforme */
-      line-height: 1.2;
+    /* Impostazioni globali */
+    @page {
+      size: A4;
+      margin: 5mm;
     }
   
-    .cv-wrapper{
+    body {
+      padding: 0 !important;
+      margin: 0 !important;
+      font-size: 10pt;        /* Dimensione uniforme */
+      line-height: 1.2;       /* Compatta testo */
+      background: #fff !important;
+    }
+  
+    .cv-wrapper {
+      max-width: 100%;
+      width: 100%;
       box-shadow: none;
       border: none;
     }
   
+    /* Colonne più strette */
     .left-column {
-      width: 245px;
-      padding: 12px;
+      width: 240px;     /* Ridotto */
+      padding: 10px;
     }
   
     .right-column {
-      padding: 12px;
+      padding: 10px;
     }
   
-    h1.name {
-      font-size: 15pt; /* rimane il titolo principale più grande */
-    }
-  
-    .role,
+    /* Uniformare testi tra colonne */
     .left-section p,
     .right-column p,
-    .list li,
     .item h3,
-    .date {
-      font-size: 10pt; /* tutti i testi principali uguali */
+    .date,
+    .list li {
+      font-size: 10pt;
     }
   
+    /* Titolo */
+    h1.name {
+      font-size: 15pt;
+    }
+  
+    /* Sottotitoli */
     .left-section h2,
     .right-column h2 {
-      font-size: 9.5pt; /* titoli leggermente più piccoli */
-    }
-  
-    @page {
-      size: A4;
-      margin: 5mm;
+      font-size: 10pt;
+      margin-bottom: 3px;
     }
   }
   
