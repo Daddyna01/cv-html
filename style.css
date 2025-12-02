@@ -82,6 +82,8 @@ body{
 .a-item{
     color: var(--accent);
 }
+
+
 /* COLONNA DESTRA */
 .right-column{
     flex: 1;
