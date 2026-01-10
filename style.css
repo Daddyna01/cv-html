@@ -32,7 +32,7 @@ body{
 /* COLONNA SINISTRA */
 .left-column{
     width: var(--left-width);
-    background: #f8f4d6;
+    background: #ffffff;
     padding: 24px;
     border-right: 1px solid #ddd;
 }
